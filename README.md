@@ -4,7 +4,7 @@
 
 
 ## API
-(how to get api key)[https://developers.google.com/youtube/v3/getting-started]
+[how to get api key](https://developers.google.com/youtube/v3/getting-started)
 [how to search](https://developers.google.com/youtube/v3/docs/search/list)
 
 ## SET API KEY

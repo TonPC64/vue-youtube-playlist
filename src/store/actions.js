@@ -14,3 +14,7 @@ export async function search ({ commit }, keyword) {
 export function selectVideo ({ commit }, video) {
   commit('setSelected', video)
 }
+
+export function addToPlaylist ({ commit }, video) {
+  commit('addToPlaylist', video)
+}

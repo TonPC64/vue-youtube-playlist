@@ -13,7 +13,8 @@ const store = new Vuex.Store({
     searchResults: {
       items: []
     },
-    selected: {}
+    selected: {},
+    playlists: []
   },
   getters,
   mutations,

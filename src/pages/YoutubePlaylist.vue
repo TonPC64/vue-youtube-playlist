@@ -8,7 +8,7 @@
         <Player :video="selected"/>
       </div>
       <div class="pd-10px">
-        <Playlists />
+        <Playlists :playlists=playlists />
       </div>
     </div>
   </div>
@@ -28,7 +28,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'selected'
+      'selected',
+      'playlists'
     ])
   },
   components: {
