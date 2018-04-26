@@ -1,4 +1,4 @@
-# vue-youtupe-playlist
+# vue-youtube-playlist
 
 > A Vue.js project
 
