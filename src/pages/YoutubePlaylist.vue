@@ -1,9 +1,9 @@
 <template>
-  <div class="columns">
-    <div class="column">
+  <div class="columns is-marginless">
+    <div class="column is-paddingless">
       <Search/>
     </div>
-    <div class="column">
+    <div class="column is-paddingless">
       <div>
         <Player/>
       </div>

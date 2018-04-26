@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-100vh ovf-y-scroll">
     <b-input placeholder="Search"></b-input>
     <div class="dp-flex f-drt-row al-it-center" :key="index" v-for="(item, index) in searchResults.items">
       <img class="w-fit-content" :src="item.snippet.thumbnails.default.url" alt="">
