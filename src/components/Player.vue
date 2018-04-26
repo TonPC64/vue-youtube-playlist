@@ -1,6 +1,6 @@
 <template>
   <div >
-    <div class="dp-flex f-drt-column al-it-center bg-cl-black">
+    <div class="dp-flex f-drt-column al-it-center">
       <youtube v-if="videoId" :video-id="videoId" @ended="ended()" :player-vars="{ autoplay: 1 }"></youtube>
     </div>
     {{title}}
