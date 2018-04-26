@@ -33,6 +33,7 @@ export default {
     ]),
     async ended () {
       await this.removeFromPlaylist(0)
+      await this.selectVideo({})
       if (this.playlists.length) {
         await this.selectVideo(this.playlists[0])
       }

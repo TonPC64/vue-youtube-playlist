@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="f-left w-100pct mg-bt-10px" :key="index" v-for="(item, index) in playlists">
+    <div v-if="index !== 0" class="f-left w-100pct mg-bt-10px" :key="index" v-for="(item, index) in playlists">
       <img class="f-left mg-r-10px" @click="selectVideo(item)" :src="item.snippet.thumbnails.default.url">
       <div class="mg-bt-10px">
         {{item.snippet.title}}
