@@ -10,3 +10,7 @@ export async function search ({ commit }, keyword) {
     console.log(error)
   }
 }
+
+export function selectVideo ({ commit }, video) {
+  commit('setSelected', video)
+}

@@ -4,11 +4,11 @@
       <Search/>
     </div>
     <div class="column is-paddingless">
-      <div>
-        <Player/>
+      <div class="pd-10px">
+        <Player :video="selected"/>
       </div>
-      <div>
-        <Playlists/>
+      <div class="pd-10px">
+        <Playlists />
       </div>
     </div>
   </div>
@@ -19,10 +19,17 @@ import Search from '../components/Search'
 import Player from '../components/Player'
 import Playlists from '../components/Playlists'
 
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'YoutubePlaylist',
   data () {
     return {}
+  },
+  computed: {
+    ...mapGetters([
+      'selected'
+    ])
   },
   components: {
     Search,

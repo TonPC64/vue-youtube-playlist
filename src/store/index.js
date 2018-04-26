@@ -12,7 +12,8 @@ const store = new Vuex.Store({
   state: {
     searchResults: {
       items: []
-    }
+    },
+    selected: {}
   },
   getters,
   mutations,
