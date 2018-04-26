@@ -1,5 +1,12 @@
 import axios from 'axios'
-import config from '../config/config'
+let config
+if (process.env.NODE_ENV === 'production') {
+  config = require('../config/config').default
+} else {
+  config = require('../config/config.dev').default
+}
+
+console.log(config)
 
 export async function search ({ commit }, keyword) {
   try {
