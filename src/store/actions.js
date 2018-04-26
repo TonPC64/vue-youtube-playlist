@@ -18,3 +18,7 @@ export function selectVideo ({ commit }, video) {
 export function addToPlaylist ({ commit }, video) {
   commit('addToPlaylist', video)
 }
+
+export function removeFromPlaylist ({ commit }, index) {
+  commit('removeFromPlaylist', index)
+}
