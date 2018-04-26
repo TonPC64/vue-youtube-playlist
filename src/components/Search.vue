@@ -5,7 +5,7 @@
       <b-input class="pd-10px column" placeholder="Search" v-model="keyword" @keyup.enter.native="search(keyword)"></b-input>
     </div>
     <div class="h-56calc ovf-y-scroll">
-      <div class="dp-flex f-drt-row al-it-center pd-10px cs-pointer" :key="index" v-for="(item, index) in searchResults.items">
+      <div v-if="item.id.kind === 'youtube#video'" class="dp-flex f-drt-row al-it-center pd-10px cs-pointer" :key="index" v-for="(item, index) in searchResults.items">
         <img class="w-fit-content mg-10px" :src="item.snippet.thumbnails.default.url" alt="">
         <div class="dp-flex f-drt-column">
           <span>{{item.snippet.title}}</span>
