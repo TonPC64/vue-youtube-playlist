@@ -1,13 +1,14 @@
 <template>
   <div >
     <div class="dp-flex f-drt-column al-it-center">
-      <youtube :video-id="videoId"></youtube>
+      <youtube :video-id="videoId" @ended="ended()" :player-vars="{ autoplay: 1 }"></youtube>
     </div>
     {{title}}
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
   props: {
     video: {
@@ -16,11 +17,26 @@ export default {
     }
   },
   computed: {
+    ...mapGetters([
+      'playlists'
+    ]),
     videoId () {
       return this.video && this.video.id ? this.video.id.videoId : ''
     },
     title () {
       return this.video && this.video.id ? this.video.snippet.title : ''
+    }
+  },
+  methods: {
+    ...mapActions([
+      'removeFromPlaylist',
+      'selectVideo'
+    ]),
+    async ended () {
+      await this.removeFromPlaylist(0)
+      if (this.playlists.length) {
+        await this.selectVideo(this.playlists[0])
+      }
     }
   }
 }
