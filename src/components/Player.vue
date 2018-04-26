@@ -1,7 +1,7 @@
 <template>
   <div >
-    <div class="dp-flex f-drt-column al-it-center">
-      <youtube :video-id="videoId" @ended="ended()" :player-vars="{ autoplay: 1 }"></youtube>
+    <div class="dp-flex f-drt-column al-it-center bg-cl-black">
+      <youtube v-if="videoId" :video-id="videoId" @ended="ended()" :player-vars="{ autoplay: 1 }"></youtube>
     </div>
     {{title}}
   </div>
@@ -34,6 +34,7 @@ export default {
     ]),
     async ended () {
       await this.removeFromPlaylist(0)
+      await this.selectVideo({})
       if (this.playlists.length) {
         await this.selectVideo(this.playlists[0])
       }
