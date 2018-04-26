@@ -1,9 +1,8 @@
 <template>
   <div >
     <div class="dp-flex f-drt-column al-it-center">
-      <youtube :video-id="videoId" @ended="ended()" :player-vars="{ autoplay: 1 }"></youtube>
+      <youtube class="f-left w-100pct" :video-id="videoId" @ended="ended()" :player-vars="{ autoplay: 1 }" player-width="100%"></youtube>
     </div>
-    {{title}}
   </div>
 </template>
 

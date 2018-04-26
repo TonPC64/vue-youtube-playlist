@@ -4,11 +4,11 @@
       <Search/>
     </div>
     <div class="column is-paddingless">
-      <div class="pd-10px">
+      <div class="f-left w-100pct h-400px">
         <Player :video="selected"/>
       </div>
-      <div class="pd-10px">
-        <Playlists :playlists=playlists />
+      <div class="f-left w-100pct h-400calc ovf-auto">
+        <Playlists :playlists="playlists"/>
       </div>
     </div>
   </div>
@@ -39,3 +39,21 @@ export default {
   }
 }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.bg-cl-282828 {
+  background-color: #282828;
+}
+.h-400px {
+  height: 400px;
+}
+.h-400calc {
+  height: calc(100vh - 400px);
+}
+div {
+  box-sizing: border-box !important;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+</style>
