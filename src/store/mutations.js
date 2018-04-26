@@ -7,6 +7,9 @@ export const setSelected = (state, video) => {
 }
 
 export const addToPlaylist = (state, video) => {
+  if (!state.playlists.length) {
+    state.selected = video
+  }
   state.playlists.push(video)
 }
 
