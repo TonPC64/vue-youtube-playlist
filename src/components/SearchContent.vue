@@ -13,11 +13,6 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 export default {
-  data () {
-    return {
-      keyword: ''
-    }
-  },
   computed: {
     ...mapGetters([
       'searchResults'
@@ -25,20 +20,11 @@ export default {
   },
   methods: {
     ...mapActions([
-      'search',
       'addToPlaylist'
     ])
-  },
-  created () {
-    this.search('')
   }
 }
 </script>
 
 <style scoped>
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: red;
-}
 </style>
