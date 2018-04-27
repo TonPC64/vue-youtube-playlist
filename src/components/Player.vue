@@ -1,8 +1,18 @@
 <template>
-  <div >
-    <div class="dp-flex f-drt-column al-it-center">
-      <youtube class="f-left w-100pct" :video-id="videoId" @ended="ended()" :player-vars="{ autoplay: 1 }" player-width="100%"></youtube>
-    </div>
+  <div class="h-100pct dp-flex f-drt-column jtf-ct-center">
+    <youtube
+      v-if="videoId !== ''"
+      class="f-left w-100pct"
+      :video-id="videoId"
+      @ended="ended()"
+      :player-vars="{ autoplay: 1 }"
+      player-width="100%">
+    </youtube>
+    <h3 
+      v-else 
+      class="title t-al-center">
+      No video selected
+    </h3>
   </div>
 </template>
 
