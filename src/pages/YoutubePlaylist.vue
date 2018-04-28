@@ -1,7 +1,7 @@
 <template>
   <div class="columns is-marginless">
     <div class="column is-paddingless">
-      <Search/>
+      <SearchContent/>
     </div>
     <div class="column is-paddingless">
       <div class="f-left w-100pct h-400px">
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Search from '../components/Search'
+import SearchContent from '../components/SearchContent'
 import Player from '../components/Player'
 import Playlists from '../components/Playlists'
 
@@ -33,7 +33,7 @@ export default {
     ])
   },
   components: {
-    Search,
+    SearchContent,
     Player,
     Playlists
   }
