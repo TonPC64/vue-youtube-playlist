@@ -7,7 +7,7 @@ import * as actions from './actions'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
+export const store = new Vuex.Store({
   strict: true,
   state: {
     searchResults: {
@@ -20,5 +20,3 @@ const store = new Vuex.Store({
   mutations,
   actions
 })
-
-export default store

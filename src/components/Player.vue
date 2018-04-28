@@ -18,21 +18,16 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 export default {
-  props: {
-    video: {
-      type: Object,
-      default: () => { return {} }
-    }
-  },
   computed: {
     ...mapGetters([
+      'selected',
       'playlists'
     ]),
     videoId () {
-      return this.video && this.video.id ? this.video.id.videoId : ''
+      return this.selected && this.selected.id ? this.selected.id.videoId : ''
     },
     title () {
-      return this.video && this.video.id ? this.video.snippet.title : ''
+      return this.selected && this.selected.id ? this.selected.snippet.title : ''
     }
   },
   methods: {

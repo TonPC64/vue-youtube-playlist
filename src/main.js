@@ -6,7 +6,7 @@ import VueYouTubeEmbed from 'vue-youtube-embed'
 
 import App from './App'
 import router from './router'
-import store from './store'
+import { store } from './store'
 
 import 'buefy/lib/buefy.css'
 import 'begeta'

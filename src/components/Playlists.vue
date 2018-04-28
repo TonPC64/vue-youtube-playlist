@@ -11,13 +11,12 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
-  props: {
-    playlists: {
-      type: Array,
-      default: () => []
-    }
+  computed: {
+    ...mapGetters([
+      'playlists'
+    ])
   },
   methods: {
     ...mapActions([
