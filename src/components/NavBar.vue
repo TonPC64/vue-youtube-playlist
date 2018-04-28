@@ -4,8 +4,8 @@
       <div class="navbar-brand logo dp-flex f-drt-column jtf-ct-center">
         VueTube
       </div>
-      <div class="navbar-start">
-        <div class="navbar-item">
+      <div class="navbar-start mg-r-0px f-left w-100pct">
+        <div class="navbar-item f-left w-100pct">
           <b-input class="pd-10px column" placeholder="Search" v-model="keyword" @keyup.enter.native="search(keyword)"></b-input>
         </div>
       </div>
@@ -37,7 +37,7 @@ export default {
 .logo {
   font-size: 25px;
   font-weight: bold;
-  color: white;
+  color: #42b883;
 }
 .background-grey {
   background-color: #131313

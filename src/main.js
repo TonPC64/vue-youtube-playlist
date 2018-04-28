@@ -10,7 +10,6 @@ import store from './store'
 
 import 'buefy/lib/buefy.css'
 import 'begeta'
-import './assets/css/main.css'
 
 Vue.use(VueYouTubeEmbed)
 Vue.use(Buefy)

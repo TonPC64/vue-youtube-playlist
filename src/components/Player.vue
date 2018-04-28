@@ -8,8 +8,7 @@
       :player-vars="{ autoplay: 1 }"
       player-width="100%">
     </youtube>
-    <h3 
-      v-else 
+    <h3 v-else
       class="title t-al-center">
       No video selected
     </h3>
