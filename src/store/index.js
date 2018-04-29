@@ -13,8 +13,8 @@ export const store = new Vuex.Store({
     searchResults: {
       items: []
     },
-    selected: {},
-    playlists: []
+    playlists: [],
+    selected: {}
   },
   getters,
   mutations,
