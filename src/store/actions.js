@@ -15,7 +15,10 @@ export function selectVideo ({ commit }, video) {
   commit('setSelected', video)
 }
 
-export function addToPlaylist ({ commit }, video) {
+export function addToPlaylist ({ commit, state, dispatch }, video) {
+  if (!state.playlists.length) {
+    dispatch('selectVideo', video)
+  }
   commit('addToPlaylist', video)
 }
 
