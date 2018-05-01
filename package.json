@@ -14,6 +14,7 @@
     "axios": "^0.18.0",
     "begeta": "^0.1.18",
     "buefy": "^0.6.5",
+    "dotenv": "^5.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-youtube-embed": "^2.1.3",
